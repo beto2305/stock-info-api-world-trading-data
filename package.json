@@ -1,0 +1,53 @@
+{
+  "name": "node-blank",
+  "version": "1.0.0",
+  "description": "app model to develop node.js applications",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --timeout 2000 --exit",
+    "dev": "set NODE_ENV=development && node --inspect app.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beto2305/node-blank.git"
+  },
+  "author": "rarruda@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beto2305/node-blank/issues"
+  },
+  "homepage": "https://github.com/beto2305/node-blank#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "config": "^1.30.0",
+    "cors": "^2.8.5",
+    "dateformat": "^3.0.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.3",
+    "express-joi-validation": "^0.3.0",
+    "helmet": "^3.12.1",
+    "hoek": "^5.0.3",
+    "joi": "^13.7.0",
+    "joi-date-extensions": "^1.2.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.5.11",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "prom-client": "^11.2.1",
+    "response-time": "^2.3.2",
+    "winston": "^2.4.2",
+    "winston-daily-rotate-file": "^3.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "request": "^2.88.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "api": {
+    "name": "api.wtd",
+    "version": "v1"
+  },
+  "server": {
+    "environment": "production",
+    "port": 3010
+  },
+  "database": {
+    "host": "ds131905.mlab.com",
+    "port": 31905,
+    "dbName": "stock_info_dev",
+    "dbUser": "stock_info_dev_dbuser",
+    "dbPwd": "$Clust3r_WK"
+  },
+  "log": {
+    "maxLogFileSize": "10m",
+    "maxLogFiles": "30"
+  },
+  "prometheus": "enabled"
+}

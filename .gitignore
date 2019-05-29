@@ -1,0 +1,12 @@
+# Logs
+logs/
+
+# Dependency directory
+node_modules/
+
+# VS Code
+.vscode/
+typings/
+typings.json
+jsconfig.json
+.history/

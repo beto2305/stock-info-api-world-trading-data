@@ -1,0 +1,25 @@
+{
+  "api": {
+    "name": "api.wtd",
+    "version": "v1"
+  },
+  "wtd": {
+    "api": "https://www.worldtradingdata.com/api/v1/history?api_token=KFIPd9DcJwFJxlnCj5Xpqs87ooWpngqiCjVAeP6dWdGzehHHrUHswxvFY5Ce"
+  },
+  "server": {
+    "environment": "development",
+    "port": 3000
+  },
+  "database": {
+    "host": "ds131905.mlab.com",
+    "port": 31905,
+    "dbName": "stock_info_dev",
+    "dbUser": "stock_info_dev_dbuser",
+    "dbPwd": "$Clust3r_WK"
+  },
+  "log": {
+    "maxLogFileSize": "10m",
+    "maxLogFiles": "30"
+  },
+  "prometheus": "enabled"
+}

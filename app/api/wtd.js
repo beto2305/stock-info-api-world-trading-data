@@ -3,7 +3,7 @@
 let responseFactory = require("../libs/response-factory").init(),
   helloControllerFactory = require("../controllers/wtd");
 
-module.exports.init = function(config, logger) {
+module.exports.init = function (config, logger) {
   logger.info("Initializing APIs.");
 
   let controller = helloControllerFactory.init(config, logger);
@@ -13,7 +13,8 @@ module.exports.init = function(config, logger) {
     startRoutine: async (req, res) => {
       logger.debug("api.wtd.startRoutine - req method: " + req.method);
       try {
-        console.log(controller.startRoutine());
+
+        let result = await controller.startRoutine()
 
         return responseFactory.ok(req, res, result, logger);
       } catch (error) {

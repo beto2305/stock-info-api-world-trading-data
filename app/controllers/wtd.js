@@ -3,7 +3,7 @@
 let apiWtdFct = require("../external/api-get-wtd-stock-history"),
   dateFormat = require("dateformat");
 
-module.exports.init = function(config, logger) {
+module.exports.init = function (config, logger) {
   logger.info("Initializing controller.");
 
   // initialize external endpoints
@@ -11,8 +11,18 @@ module.exports.init = function(config, logger) {
 
   let controller = {
     //
-    startRoutine: async (stock, searchList) => {
+    startRoutine: async () => {
       logger.debug("controller.wtd - startRoutine");
+
+      let routine = { created: new Date(), delay: 600000, active: true }
+
+      //let dao = daoRoutine.init(logger)
+      let daoRoutine = require("../data/routine").init(logger);
+
+      let response = await daoRoutine.createRoutine(routine);
+
+      return response.message;
+
     },
 
     //

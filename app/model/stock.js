@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const StockSchema = new Schema({
+let StockSchema = new Schema({
   symbol: {
     type: String,
     required: [true, "symbol is required."]
@@ -9,5 +9,5 @@ const StockSchema = new Schema({
   type: String
 });
 
-const Stock = mongoose.model("Stock", StockSchema);
-module.exports = Stock;
+module.exports = mongoose.model("Stock", StockSchema);
+

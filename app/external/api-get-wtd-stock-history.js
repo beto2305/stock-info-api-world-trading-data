@@ -2,10 +2,12 @@
 
 let axios = require("axios");
 
-module.exports.init = function(config, logger) {
+module.exports.init = function (config, logger) {
   logger.info("Initializing external API: World Trading Data.");
 
   let handler = {
+
+    // query World Trading Data API to get stock history for informed period
     getStockValues: async (symbol, dateFrom, dateTo) => {
       logger.debug("controller.wtd - getStockValues");
 

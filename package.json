@@ -1,26 +1,26 @@
 {
-  "name": "node-blank",
+  "name": "stock-info-api-world-trading-data",
   "version": "1.0.0",
-  "description": "app model to develop node.js applications",
-  "main": "app.js",
+  "description": "Update stock quotation for selected symbols recorded on app database",
+  "main": "server.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --timeout 2000 -c --exit",
-    "dev": "set NODE_ENV=development && node --inspect app.js",
+    "dev": "node --inspect server.js",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beto2305/node-blank.git"
+    "url": "git+https://github.com/beto2305/stock-info-api-world-trading-data.git"
   },
   "author": "rarruda@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/beto2305/node-blank/issues"
+    "url": "https://github.com/beto2305/stock-info-api-world-trading-data/issues"
   },
-  "homepage": "https://github.com/beto2305/node-blank#readme",
+  "homepage": "https://github.com/beto2305/stock-info-api-world-trading-data#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",

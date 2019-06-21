@@ -53,6 +53,10 @@ module.exports.init = function (config, logger) {
           req.query.date_to
         );
 
+        if (null !== result && null !== result.message) {
+          return responseFactory.notFound(req, res, result.message, logger)
+        }
+
         return responseFactory.ok(req, res, result, logger);
       } catch (error) {
         return responseFactory.serverError(req, res, error, logger);

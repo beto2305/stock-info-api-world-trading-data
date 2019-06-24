@@ -4,13 +4,13 @@ let apiFactory = require("../api/wtd"),
   responseFactory = require("../libs/response-factory").init(),
   requestValidator = require("./wtd-request-validator");
 
-module.exports.init = function(app, logger) {
+module.exports.init = function (app, logger) {
   logger.info("Initializing routes.");
 
   let api = apiFactory.init(app.get("config"), logger);
 
   // ***** Route test server on! *****
-  app.all(["/", "/api", "/api/v1"], function(req, res) {
+  app.all(["/", "/api", "/api/v1"], function (req, res) {
     res.json({
       core: "Middleware is on - " + app.get("config").api.name + "!",
       version: app.get("config").api.version,
@@ -30,7 +30,7 @@ module.exports.init = function(app, logger) {
   app.get(
     "/api/v1/wtd/history",
     requestValidator.validateApiStockHistory(),
-    api.history
+    api.stockHistory
   );
 
   /* Erro Handler express-joi-validation */
@@ -44,7 +44,7 @@ module.exports.init = function(app, logger) {
   });
 
   // catch requests for not mapped URLs
-  app.use(function(req, res) {
+  app.use(function (req, res) {
     let msg =
       "The requested resource (" +
       req.originalUrl +

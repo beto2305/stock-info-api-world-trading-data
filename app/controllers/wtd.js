@@ -40,7 +40,7 @@ module.exports.init = function (config, logger) {
     },
 
     //
-    getStockValues: async (symbol, dateFrom, dateTo) => {
+    getStockHistory: async (symbol, dateFrom, dateTo) => {
       logger.debug("controller.wtd - getStockValues");
 
       // get api results
@@ -51,13 +51,7 @@ module.exports.init = function (config, logger) {
       );
 
       //
-      let formatedResult = { symbol: symbol, history: [], message: '' };
-
-      if (null !== apiResult && null !== apiResult['Message']) {
-        formatedResult.message = apiResult['Message']
-        return formatedResult
-      }
-
+      let formatedResult = { symbol: symbol, history: [] };
 
       // correct api original format, correct array notation
       for (let date in apiResult.history) {

@@ -44,18 +44,14 @@ module.exports.init = function (config, logger) {
       }
     },
 
-    history: async (req, res) => {
+    stockHistory: async (req, res) => {
       logger.debug("api.wtd.history - req method: " + req.method);
       try {
-        let result = await controller.getStockValues(
+        let result = await controller.getStockHistory(
           req.query.symbol,
           req.query.date_from,
           req.query.date_to
         );
-
-        if (null !== result && null !== result.message) {
-          return responseFactory.notFound(req, res, result.message, logger)
-        }
 
         return responseFactory.ok(req, res, result, logger);
       } catch (error) {

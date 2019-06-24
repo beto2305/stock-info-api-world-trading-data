@@ -2,7 +2,7 @@
 
 
 module.exports.init = function (logger) {
-    
+
     let responseFactory = {
         // HTTP 1.1 / 200
         ok: (req, res, msg, logger) => {
